@@ -1,5 +1,5 @@
 // Retrieve the score from localStorage or initialize if it doesn't exist
-let score = JSON.parse(localStorage.getItem('score')) || {
+let score =  {
     win: 0,
     losses: 0,
     tie: 0,
@@ -75,7 +75,7 @@ function playGame(playerMove) {
     }
 
     // Update localStorage and the DOM
-    localStorage.setItem('score', JSON.stringify(score));
+    //localStorage.setItem('score', JSON.stringify(score));
     updateScoreDisplay();
     Result(result);
     playermoveDisplay(playerMove, ComputerMove);
